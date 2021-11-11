@@ -15,4 +15,9 @@
             зарегистрироваться
         </a>
     </button>
+    <button>
+        <a href="{% url 'social:begin'  'vk-oauth2' %}?next=/">
+            Вход через Вконтакте
+        </a>
+    </button>
 {% endblock %}

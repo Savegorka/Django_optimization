@@ -3,3 +3,4 @@ env/
 *.pyc
 .idea
 geekshop/db.sqlite3
+geekshop/.env
