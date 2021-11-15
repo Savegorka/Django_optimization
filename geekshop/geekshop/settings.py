@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'mainapp',
     'basketapp',
     'adminapp',
+    'ordersapp',
 
     'social_django',
 ]
@@ -156,9 +157,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-<<<<<<< Updated upstream
+# Updated upstream
 LOGIN_URL = '/auth/login/'
-=======
+
 LOGIN_URL = '/auth/login/'
 
 DOMAIN_NAME = 'http://localhost:8000'
@@ -187,4 +188,4 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.load_extra_data',
     'social_core.pipeline.user.user_details',
 )
->>>>>>> Stashed changes
+#Stashed changes

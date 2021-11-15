@@ -1,18 +1,18 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-<<<<<<< Updated upstream
-=======
+#<<<<<<< Updated upstream
+#=======
 from django.utils.timezone import now
 from django.dispatch import receiver
 from django.db.models.signals import post_save
->>>>>>> Stashed changes
+#>>>>>>> Stashed changes
 
 
 class ShopUser(AbstractUser):
     avatar = models.ImageField(upload_to='users_avatars', blank=True)
-<<<<<<< Updated upstream
+#<<<<<<< Updated upstream
     age = models.PositiveIntegerField(verbose_name='возраст')
-=======
+#=======
     age = models.PositiveIntegerField(verbose_name='возраст', default=18)
 
     activation_key = models.CharField(max_length=128, blank=True)
@@ -52,4 +52,4 @@ class ShopUserProfile(models.Model):
     def save_user_profile(sender, instance, created, **kwargs):
         if created:
             ShopUserProfile.objects.create(user=instance )
->>>>>>> Stashed changes
+#>>>>>>> Stashed changes
