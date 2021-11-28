@@ -1,6 +1,8 @@
 import ordersapp.views as ordersapp
 from django.urls import re_path, path
 
+from geekshop.ordersapp.views import get_product_price
+
 app_name="ordersapp"
 
 urlpatterns = [
@@ -10,4 +12,5 @@ urlpatterns = [
     path('read/<int:pk>/', ordersapp.OrderRead.as_view(), name='order_read'),
     path('update/<int:pk>/', ordersapp.OrderUpdate.as_view(), name='order_update'),
     path('delete/<int:pk>/', ordersapp.OrderDelete.as_view(), name='order_delete'),
+    path('product/<int:pk>/price/', get_product_price)
 ]
